@@ -7,11 +7,11 @@ static int sum(int a, int b) { return a+b; }
 static int bad_sum(int a, int b) { return a+b+1; }
 
 static void good(void) {
-  check_cond(sum(2, 2), "sum(2, 2) check");
+  check_cond(sum(2, 2) == 4, "sum(2, 2) check");
 }
 
 static void bad(void) {
-  check_cond(bad_sum(2, 2), "sum(2, 2) check");
+  check_cond(bad_sum(2, 2) == 4, "sum(2, 2) check");
 }
 
 int main(void) {
